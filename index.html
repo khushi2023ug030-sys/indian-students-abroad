@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Indian students going abroad: a system map</title>
+<link rel="stylesheet" href="js/vendor/lenis.css">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/v2.css">
+<link rel="stylesheet" href="css/v3.css">
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<section id="hero" class="dark">
+  <svg class="scene" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#05070B"/><stop offset=".45" stop-color="#0E121B"/><stop offset=".75" stop-color="#1A2030"/><stop offset="1" stop-color="#2A3248"/></linearGradient>
+      <radialGradient id="cityglow" cx="50%" cy="100%" r="70%"><stop offset="0" stop-color="#2445FF" stop-opacity=".35"/><stop offset="1" stop-color="#2445FF" stop-opacity="0"/></radialGradient>
+      <radialGradient id="glow" cx="50%" cy="50%"><stop offset="0" stop-color="#94A3FF" stop-opacity=".9"/><stop offset="1" stop-color="#94A3FF" stop-opacity="0"/></radialGradient>
+      <radialGradient id="tube" cx="50%" cy="0%" r="90%"><stop offset="0" stop-color="#EEF0F3" stop-opacity=".35"/><stop offset="1" stop-color="#EEF0F3" stop-opacity="0"/></radialGradient>
+      <linearGradient id="trailg" x1="0" x2="1"><stop offset="0" stop-color="#EEF0F3" stop-opacity="0"/><stop offset="1" stop-color="#EEF0F3" stop-opacity=".7"/></linearGradient>
+      <linearGradient id="shade" x1="0" x2="1"><stop offset="0" stop-color="#05070B" stop-opacity=".8"/><stop offset=".45" stop-color="#05070B" stop-opacity=".2"/><stop offset=".62" stop-color="#05070B" stop-opacity="0"/></linearGradient>
+    </defs>
+    <g id="L-sky">
+      <rect width="1600" height="900" fill="url(#sky)"/>
+      <rect y="380" width="1600" height="520" fill="url(#cityglow)"/>
+      <g fill="#EEF0F3"><circle cx="140" cy="70" r="1.2" opacity=".7"/><circle cx="310" cy="150" r="1" opacity=".5"/><circle cx="520" cy="60" r="1.3" opacity=".8"/><circle cx="760" cy="110" r="1" opacity=".45"/><circle cx="930" cy="48" r="1.2" opacity=".7"/><circle cx="1150" cy="96" r="1" opacity=".5"/><circle cx="1390" cy="58" r="1.4" opacity=".8"/><circle cx="1520" cy="160" r="1" opacity=".5"/><circle cx="660" cy="200" r=".9" opacity=".4"/><circle cx="1240" cy="190" r=".9" opacity=".35"/></g>
+      <path d="M1320 132 a34 34 0 1 0 30 50 a28 28 0 1 1 -30 -50z" fill="#EEF0F3" opacity=".85"/>
+    </g>
+    <g id="L-plane">
+      <path id="flightpath" d="M-80 330 C 300 250, 800 190, 1700 70" fill="none"/>
+      <path id="trail" d="M-80 330 C 300 250, 800 190, 1700 70" fill="none" stroke="url(#trailg)" stroke-width="2" stroke-linecap="round"/>
+      <g id="plane"><path d="M-14 0 L10 -1.5 L16 0 L10 1.5Z M-2 0 L-8 -9 L-4 -9 L6 0 L-4 9 L-8 9Z M-13 0 L-16 -4 L-14 -4 L-10 0 L-14 4 L-16 4Z" fill="#EEF0F3"/><circle id="beacon" cx="-2" cy="9" r="1.6" fill="#6178FF"/></g>
+    </g>
+    <g id="L-far" fill="#1E2432">
+      <path d="M0 640 L0 560 L60 560 L60 520 L110 520 L110 575 L170 575 L170 540 L230 540 L230 590 L300 590 L300 545 L330 545 L330 500 L345 500 L345 545 L380 545 L380 600 L450 600 L450 560 L520 560 L520 610 L600 610 L600 570 L640 570 L640 600 L700 600 L700 540 L760 540 L760 600 L840 600 L840 560 L900 560 L900 525 L980 525 L980 585 L1060 585 L1060 550 L1110 550 L1110 600 L1190 600 L1190 560 L1260 560 L1260 610 L1320 610 L1320 548 L1380 548 L1380 596 L1460 596 L1460 556 L1540 556 L1540 600 L1600 600 L1600 900 L0 900Z"/>
+      <path d="M560 610 L570 470 L580 470 L582 455 L598 455 L600 470 L610 470 L620 610Z"/><path d="M585 455 L590 432 L595 455Z"/>
+      <g transform="translate(1180,470)"><rect x="-38" y="0" width="76" height="34" rx="6"/><rect x="-30" y="34" width="5" height="96"/><rect x="25" y="34" width="5" height="96"/><path d="M-28 50 L28 90 M28 50 L-28 90" stroke="#1E2432" stroke-width="4"/></g>
+      <g transform="translate(860,380)" stroke="#1E2432" stroke-width="3" fill="none"><path d="M0 0 L-22 200 M0 0 L22 200 M-16 60 L16 60 M-19 110 L19 110 M-21 160 L21 160 M-16 60 L19 110 M16 60 L-19 110"/><rect x="-6" y="10" width="12" height="18" fill="#1E2432"/></g>
+      <circle cx="860" cy="378" r="3" fill="#6178FF" id="towerlight"/>
+      <path d="M1400 556 a40 40 0 0 1 80 0Z"/><rect x="1494" y="470" width="10" height="90"/><path d="M1490 470 L1499 446 L1508 470Z"/>
+    </g>
+    <g id="L-mid">
+      <g fill="#141822"><rect x="0" y="640" width="220" height="460"/><rect x="200" y="600" width="260" height="500"/><rect x="440" y="660" width="180" height="440"/><rect x="900" y="630" width="230" height="470"/><rect x="1110" y="680" width="200" height="420"/><rect x="1290" y="620" width="240" height="480"/><rect x="1510" y="660" width="120" height="440"/></g>
+      <g id="windows" fill="#EEF0F3"></g>
+      <g transform="translate(770,430)">
+        <rect x="30" y="150" width="8" height="40" fill="#0B0D12"/><rect x="290" y="150" width="8" height="40" fill="#0B0D12"/>
+        <rect width="330" height="150" fill="#EEF0F3"/><rect width="330" height="34" fill="#0F1115"/>
+        <text x="14" y="23" font-family="Plex" font-weight="600" font-size="14" fill="#EEF0F3" letter-spacing="2">GLOBAL EDGE OVERSEAS</text>
+        <text x="14" y="72" font-family="Inter" font-weight="900" font-size="30" fill="#0F1115">IELTS · GRE · PTE</text>
+        <text x="14" y="100" font-family="Inter" font-weight="600" font-size="16" fill="#0F1115" opacity=".7">Canada · USA · UK · Germany</text>
+        <rect x="14" y="112" width="190" height="26" fill="#2445FF"/><text x="22" y="131" font-family="Inter" font-weight="800" font-size="15" fill="#fff">VISA ASSISTANCE*</text>
+        <text x="236" y="138" font-family="Inter" font-size="9" fill="#0F1115" opacity=".6">*T&amp;C apply</text>
+        <rect x="-6" y="-10" width="342" height="170" fill="url(#tube)" id="tubeglow"/>
+      </g>
+      <g transform="translate(1150,505)">
+        <rect x="20" y="118" width="7" height="30" fill="#0B0D12"/><rect x="240" y="118" width="7" height="30" fill="#0B0D12"/>
+        <rect width="270" height="118" fill="#EEF0F3"/>
+        <text x="12" y="32" font-family="Inter" font-weight="900" font-size="26" fill="#2445FF">MBBS ABROAD</text>
+        <text x="12" y="56" font-family="Inter" font-weight="600" font-size="14" fill="#0F1115">Russia · Georgia · Kyrgyzstan</text>
+        <rect x="12" y="68" width="140" height="22" fill="#0F1115"/><text x="20" y="84" font-family="Inter" font-weight="800" font-size="13" fill="#EEF0F3">NO DONATION</text>
+        <text x="12" y="108" font-family="Inter" font-size="11" fill="#0F1115" opacity=".6">Admissions open · 98XXX XXXXX</text>
+      </g>
+    </g>
+    <g id="L-near">
+      <path d="M0 790 L1600 770 L1600 1100 L0 1100Z" fill="#090B10"/><rect y="770" width="1600" height="22" fill="#10131A"/>
+      <g transform="translate(1250,640)"><rect y="10" width="130" height="122" rx="14" fill="#05070B"/><rect width="130" height="22" rx="11" fill="#0D1016"/><g stroke="#141822" stroke-width="3"><line y1="44" x2="130" y2="44"/><line y1="72" x2="130" y2="72"/><line y1="100" x2="130" y2="100"/></g></g>
+      <path d="M1060 660 Q1150 700 1240 678" stroke="#1A1F2B" stroke-width="2" fill="none"/><rect x="1056" y="650" width="6" height="125" fill="#10131A"/>
+      <path d="M1095 676 l26 4 l-3 52 l-22 -2Z" fill="#2B3142"/><path d="M1140 684 l34 2 l-4 38 l-28 -2Z" fill="#20307A"/><path d="M1188 684 l22 -2 l2 30 l-22 2Z" fill="#3A4152"/>
+      <g transform="translate(250,700)"><path d="M0 0 a46 46 0 0 1 60 60 Z" fill="#141822"/><line x1="30" y1="30" x2="54" y2="8" stroke="#141822" stroke-width="4"/><rect x="24" y="56" width="8" height="18" fill="#141822"/></g>
+      <g transform="translate(760,700)">
+        <circle cx="62" cy="10" r="70" fill="url(#glow)" id="phoneglow" opacity=".7"/>
+        <path d="M30 70 C28 40 40 22 52 20 C66 18 76 30 76 52 L78 70Z" fill="#05070B"/><circle cx="54" cy="6" r="14" fill="#05070B"/>
+        <path d="M44 2 C40 14 42 30 38 40 L48 32Z" fill="#05070B"/><path d="M56 40 L74 30 L78 34 L62 46Z" fill="#05070B"/>
+        <rect x="70" y="22" width="8" height="13" rx="1.5" fill="#C2CBFF" id="phone" transform="rotate(-20 74 28)"/>
+        <path d="M34 70 L30 92 L40 92 L44 70Z M60 70 L66 92 L76 92 L70 70Z" fill="#05070B"/>
+      </g>
+    </g>
+    <rect width="1600" height="900" fill="url(#shade)"/>
+  </svg>
+    <video id="hvid" src="hero.mp4" muted playsinline preload="auto" aria-hidden="true"></video>
+  <div class="hshade"></div>
+  <div class="hnum"><b id="hcount">0</b><span>Indian students are studying abroad, in 108 countries · MEA 2024</span></div>
+  <div class="copy">
+    <h1>Indian students <b>going abroad</b></h1>
+    <p class="lede">A system map of 13 lakh students: why they leave, where they go, what it costs, and what comes back to India.</p>
+  </div>
+  <div class="cue lab"><i></i>Scroll</div>
+  <div id="flash"></div>
+</section>
+
+<!-- ============ CHAT ============ -->
+<section id="chat">
+  <div class="phone">
+    <div class="top"><div class="av">R</div><div><b>Rao Family</b><small>Amma, Nanna, Kiran (Toronto), you</small></div></div>
+    <div class="msgs">
+      <div class="m" id="m1"><div class="who">Amma</div>NEET results are out. Lakshmi aunty's daughter missed a government seat by 3,000 ranks.<span class="t">9:12 pm</span></div>
+      <div class="m" id="m2"><div class="who">Kiran · Toronto</div>My landlord has a basement room free from September. Four of us split it.<span class="t">9:20 pm</span></div>
+      <div class="m" id="m3"><div class="who">Nanna</div>Spoke to the bank. They need the admission letter before they sanction anything.<span class="t">9:33 pm</span></div>
+      <div class="m me" id="m4"><div class="who">You</div>Let me look at the numbers first.<span class="t">9:41 pm ✓✓</span></div>
+    </div>
+  </div>
+  <div class="stmt fact" id="f3"><div class="n">₹2.9 lakh cr</div><div class="h" style="font-size:clamp(24px,2.4vw,36px);margin-top:10px">spent abroad on degrees in a single year, by <span class="c">8.5 lakh</span> students.</div><span class="src">NITI Aayog, 2025 · Canada, US, UK, Australia, 2023-24</span></div>
+</section>
+
+<!-- ============ PASS ============ -->
+<section id="pass">
+  <div class="card" id="card">
+    <div class="main">
+      <div class="lbl">Boarding pass · student</div>
+      <div class="route"><div><div class="lbl">From</div><div class="code">GNT</div></div>
+        <svg viewBox="0 0 120 30" height="30" style="flex:1"><path d="M2 22 Q60 -6 118 22" fill="none" stroke="#0F1115" stroke-opacity=".4" stroke-dasharray="3 3"/><circle cx="60" cy="8" r="3" fill="#2445FF"/></svg>
+        <div><div class="lbl">To</div><div class="code q">???</div></div></div>
+      <div class="grid">
+        <div><div class="lbl">Passenger</div><div class="val">ANANYA RAO</div></div>
+        <div><div class="lbl">Age</div><div class="val">21 · B.Tech</div></div>
+        <div class="seat"><div class="lbl">Seat</div><div class="val">1 of 13,35,878</div></div>
+        <div><div class="lbl">Gate</div><div class="val">Not yet open</div></div>
+      </div>
+      <div class="bar"></div>
+    </div>
+    <div class="stub"><div class="lbl">Name</div><div class="val" style="font-size:13px">A. RAO</div><div class="lbl" style="margin-top:14px">From</div><div class="val">GNT</div><div class="lbl" style="margin-top:14px">To</div><div class="val" style="color:#2445FF">???</div></div>
+  </div>
+  <div class="dot" id="pdot"></div>
+  <p class="note" id="pnote">Ananya is made up. <b style="color:#0F1115">Her seat number is real.</b></p>
+</section>
+
+<!-- ============ FIELD ============ -->
+<section id="field">
+  <canvas id="fieldc"></canvas>
+  <div class="stmt f1" id="ff1"><div class="n" id="cnt">0</div><div class="s">Indian students abroad, 2024. One dot ≈ 1,000.<br>Ananya is one of them.</div></div>
+  <div class="dlab" id="d0"><b>Canada</b><span>4,27,000</span></div><div class="dlab" id="d1"><b>USA</b><span>3,37,630</span></div><div class="dlab" id="d2"><b>UK</b><span>1,85,000</span></div><div class="dlab" id="d3"><b>Australia</b><span>1,22,202</span></div><div class="dlab" id="d4"><b>104 other countries</b><span>2,64,046</span></div>
+  <div class="rpill" id="rpill"><div class="rn">1<i>:</i><b>28</b></div><div class="rl"><span><em class="k-in"></em>came to study in India</span><span><em class="k-out"></em>left India to study</span></div></div>
+  <div class="src">Students abroad: MEA reply to Parliament, 2024 · Ratio: NITI Aayog, 2025 (data for 2024)</div>
+</section>
+
+<!-- ============ RATIO ============ -->
+
+
+<!-- ============ QUESTION ============ -->
+<!-- ============ ACT I ============ -->
+<!-- S01 · GLOBE -->
+<section id="s01">
+  <svg id="globe" viewBox="0 0 800 800"></svg>
+  <div class="stmt" id="g1"><div class="n">108</div><div class="h" style="margin-top:8px">countries have Indian students.</div><div class="s">But most of the 13,35,878 are in just a few.</div></div>
+  <div class="stmt" id="g2"><div class="h">Canada and the USA have <span class="c">57%</span> of all Indian students abroad.</div></div>
+  <div class="stmt" id="g3"><div class="h">Add the UK and Australia: <span class="c">8 in 10</span> Indian students abroad are in these four.</div></div>
+    <div class="stmt" id="g5"><div class="h">Hover over the globe to see the Indian students in each country.</div></div>
+  <div class="tally" id="tally"><div><span id="t-n">0</span><small>students shown</small></div><div><span id="t-p">0%</span><small>of all abroad</small></div></div>
+  <div class="src">MEA reply to Parliament, 2024 · top 20 of 108 countries shown</div>
+</section>
+
+<!-- S02 · STATES -->
+<section id="s02">
+  <div class="bigyear" id="byear">2016</div>
+  <svg id="imap"></svg>
+  <div class="stmt" id="i1"><div class="h">Ten states send <span class="c">more than 8 in 10</span>.</div><div class="s">Every year from 2016 to 2020. The other 22 share what's left.</div></div>
+  <div class="stmt" id="i2"><div class="h">The top spot changed hands <span class="c">four times</span> in five years.</div><div class="s">Andhra Pradesh → Maharashtra → Andhra Pradesh → Punjab → Andhra Pradesh.</div></div>
+  <div class="stmt" id="i3"><div class="h">2020: departures fell by <span class="c">55%</span>.</div><div class="s">5,44,650 in 2019. 2,43,599 in 2020. The pandemic shut the gates.</div></div>
+  <div class="stmt" id="i4"><div class="h">Find your state.</div><div class="s">Hover the map, or pick a year.</div></div>
+  <svg class="ibump" id="ibump" viewBox="0 0 330 330"></svg>
+  <div class="years" id="years"></div>
+  <div class="src">Students going abroad by state · Bureau of Immigration data via Careers360 · AP includes Telangana (separate only from 2019)</div>
+</section>
+
+
+
+<!-- S03 · THE SIEVE -->
+<section id="s03">
+  <svg id="sieve" viewBox="0 0 900 620"></svg>
+  <div class="stmt" id="c1"><div class="lab" style="color:var(--cobalt);margin-bottom:10px">The push at home · one example: medicine</div><div class="h">Why leave? Often, <span class="c">no seat here.</span></div><div class="s">24 lakh registered for NEET-UG in 2024. Each figure is 10,000 students.</div></div>
+  <div class="stmt" id="c2"><div class="h"><span class="c">13 lakh</span> qualified.</div><div class="s">23,33,297 sat the exam. 13,16,268 cleared the cut-off.</div></div>
+  <div class="stmt" id="c3"><div class="h">There were about <span class="c">1.18 lakh</span> MBBS seats.</div><div class="s">About 11 qualified candidates for every seat. Solid figures are government seats; outlined figures are private.</div></div>
+  <div class="stmt" id="c4"><div class="h">Some of the rest leave for <span class="c">these five</span>.</div><div class="s">76,983 Indian students live in the five countries best known for MBBS courses (all courses counted).</div></div>
+  <div class="stmt" id="c5"><div class="h">Coming back is <span class="c">another exam</span>.</div><div class="s">A foreign medical degree needs the FMGE to practise in India. December 2024: 13,149 of 45,552 passed.</div><div class="loop"><b>B3</b>Seats at home decide who leaves</div></div>
+  <div class="src">NEET-UG 2024: NTA · MBBS seats 2024-25: NMC via Careers360 · Students abroad: MEA 2024 · FMGE: NBEMS via Medical Dialogues</div>
+</section>
+
+<!-- S04 · THE OFFER MAP -->
+<section id="s04">
+  <div class="head">
+    <h2>Work and stay rules for Indian students, by country, <span class="c">2023–2027</span></h2>
+  </div>
+  <div class="yrs" id="ofyrs"><button data-y="2023">2023</button><button data-y="2025" class="on">2025</button><button data-y="2027">2027</button><span class="ylab" id="ofnote">Rules today</span></div>
+  <div id="offer"></div>
+  <div class="ocard" id="ocard"></div>
+  <div class="src">IRCC · USCIS · UK Home Office · Australian Dept of Home Affairs · German Residence Act §16b, §20 · Students: MEA 2024 · "Why they go" notes: Minds Adrift v1 research</div>
+</section>
+
+<!-- S04b · DIASPORA -->
+<!-- S05 · THE GATES (metro map) -->
+<section id="s05">
+  <div class="mhead">
+    <h2>Steps and fees to get a student visa, <span class="c">by country</span></h2>
+    <p class="sub">Every student takes the same first four steps. Then each country adds three gates and fees. Hover a route for the full bill.</p>
+    <div class="ticket" id="mticket"></div>
+  </div>
+  <div class="gwrap">
+    <div class="glab">Everyone, whichever country</div>
+    <div class="gtrunk" id="gtrunk"></div>
+    <div class="glab" style="margin-top:28px">Then three more gates, set by each country</div>
+    <div class="gates" id="gates"></div>
+  </div>
+  <div class="src">IRCC · ICE SEVP · US Dept of State · UK Home Office via UKCISA · Australian Dept of Home Affairs · German Missions in India / APS India · fees checked Nov 2026, they change often</div>
+</section>
+
+<!-- S06 · THE MONEY TRAIL (sankey) -->
+<section id="s06">
+  <div class="mhead">
+    <h2>Money sent abroad for education, and <span class="c">where the records stop</span></h2>
+    <div class="vbtn" id="mview"><button data-v="fy25" class="on">2024-25 · old labels</button><button data-v="m26">March 2026 · new labels</button></div>
+    <p class="say" id="msay"></p>
+    <div class="loan"><div class="n">₹40,253 cr</div><div>of education loans disbursed by banks in 2024-25, for study in India and abroad. Much of the trail starts as debt.</div></div>
+  </div>
+  <svg id="mtrail" viewBox="0 0 1100 600"></svg>
+  <div class="src">RBI Bulletin, Table 36: Outward remittances under LRS (US$ mn), FY 2024-25 and March 2026 · Education loans: Ministry of Finance data via Business Today, Jul 2026</div>
+</section>
+
+<!-- S07 · DEPARTURES YEAR BY YEAR (policy vs volume) -->
+<section id="s07">
+  <div class="dhead">
+    <h2>Indian students leaving each year, by country: Canada fell by <span class="c">96,000</span> in 2024</h2>
+    <div class="dbig"><b>2,33,532</b><span class="ar">→</span><b class="c">1,37,608</b></div>
+    <div class="dcap">Indian students who left for Canada, 2023 → 2024</div>
+    <div class="dwhy"><span>The rule</span>Study permits capped from January 2024.</div>
+    <div class="dnote" id="dnote"></div>
+  </div>
+  <svg id="depart" viewBox="0 0 900 540"></svg>
+  <div class="src">Departures: Ministry of External Affairs, Bureau of Immigration data (via Collegedunia) · Germany published for 2020 and 2024 only · US enrolled stock: Open Doors 2025 (IIE)</div>
+</section>
+
+<!-- G4 · WHAT THEY STUDY -->
+<!-- A0 · WHERE THEY LAND (tilted US, campus towers) -->
+<section id="s07u">
+  <div class="uh">
+    <h2>Universities with the most international students: <span class="c">USA, Canada, UK</span></h2>
+    <div class="utabs" id="utabs"><button data-i="0">USA</button><button data-i="1">Canada</button><button data-i="2">UK</button></div>
+    <div class="unum"><b id="ucnt">0</b><span id="ulab">Indian students in the USA</span></div>
+    <div class="ush" id="ush"></div>
+    <div class="uq"><i></i><span id="uq">Towers count all international students. How many are Indian at each campus is not published.</span></div>
+  </div>
+  <svg id="ustack" viewBox="0 0 700 440"></svg>
+  <div class="src" id="usrc"></div>
+</section>
+
+<section id="s07f">
+  <div class="fh">
+    <h2>What Indian students study abroad: <span class="c">2 in 3 in the US</span> take computer science, maths or engineering</h2>
+  </div>
+  <svg id="fields" viewBox="0 0 1000 330"></svg>
+  <div class="src">US: Open Doors 2025 (IIE), Indian students and all international students, 2024/25 · Germany: DAAD India, Winter Semester 2023/24 (engineering includes computer science) · the UK, Canada and Australia do not publish subject of study by nationality · hover a slice</div>
+</section>
+
+<!-- S08 · STOCK AND FLOW (USA, Indians) -->
+<section id="s08">
+  <div class="fhead">
+    <h2>From student to green card: Indians in the US at each step, <span class="c">2023/24–2024/25</span></h2>
+    <p class="sub">Four steps from student to permanent resident. Between each, a gate.</p>
+    <div class="lines" id="fyr"><button data-y="0">2023/24</button><button data-y="1" class="on">2024/25</button></div>
+    <div class="fnote" id="fnote"></div>
+  </div>
+  <div class="steps" id="steps"></div>
+  <div class="src">Open Doors 2024 and 2025, India fact sheets (IIE) · H-1B: USCIS FY2023 characteristics report · Per-country cap: US Immigration and Nationality Act · H-1B fee: Presidential proclamation, 19 Sep 2025 · each figure = 10,000 people</div>
+</section>
+
+<!-- A2 · WHAT YOU KEEP -->
+<section id="s09">
+  <div class="kh"><h2>Take-home pay after tax and social security, <span class="c">per 100 earned</span>, by country</h2></div>
+  <svg id="keep" viewBox="0 0 1000 330"></svg>
+  <div class="src">OECD Taxing Wages 2025, Table 1.3: income tax plus employee social security contributions, single worker without children at the average wage, 2024, as % of gross wage</div>
+</section>
+
+<!-- A3 · THE QUIET COST -->
+<!-- L1 · MONEY COMES HOME (3D night globe) -->
+<section id="s13">
+  <div class="g3" id="mglobe"></div>
+  <div class="mh">
+    <h2>Money sent home to India, <span class="c">by country</span>, 2023-24</h2>
+    <div class="ctr"><span>$</span><b id="mctr">0.0</b><span> bn</span></div>
+    <div class="cl">sent home to India in 2023-24. 51.2% came from the USA, UK, Singapore, Canada and Australia, more than from the Gulf.</div>
+    <ol class="mlist" id="mlist"></ol>
+  </div>
+  <div class="src">RBI, Sixth round of India's Remittances Survey 2023-24 (RBI Bulletin, March 2025): total and country shares; dollar amounts = each share × $118.7 bn · all Indians abroad, not students alone</div>
+</section>
+
+<!-- L2 · THE CAMPUS COMES HERE (tilted India, stacking towers) -->
+<section id="s14">
+  <div class="ch">
+    <h2>Foreign university campuses opening in India, <span class="c">2023–2025</span></h2>
+    <div class="cdate" id="cdate">Nov 2023</div>
+    <div class="cev" id="cev"></div>
+    <div class="ckey"><span><i class="k1"></i>teaching</span><span><i class="k2"></i>approved, not open yet</span></div>
+  </div>
+  <svg id="campus" viewBox="0 0 640 520"></svg>
+  <div class="ctl" id="ctl"></div>
+  <div class="src">UGC (Setting up and Operation of Campuses of Foreign HEIs in India) Regulations, 2023 · IFSCA (GIFT City) · Ministry of Education reply in Parliament, Aug 2025 · British Council India, Jul 2025 · status as last officially reported</div>
+</section>
+
+
+<!-- L3 · THE WHOLE SYSTEM (actor network) -->
+<section id="s15">
+  <div class="nh">
+    <h2>The system: <span class="c">9 actors</span> and the flows between them</h2>
+    <div class="nf" id="nflt"></div>
+    <div class="nl" id="nloops"></div>
+    <div class="nm" id="nmech"></div>
+  </div>
+  <svg id="net" viewBox="0 0 1000 560"></svg>
+  <div class="src">Actors, flows and the four feedback loops from the team's system map (Minds Adrift, v1) · evidence behind each link is in the chapter it opens</div>
+</section>
+
+<!-- L4 · DATA ROOM -->
+<section id="s16">
+  <div class="dh">
+    <h2>Data <span class="c">sources</span></h2>
+    <div class="dctl"><input id="dq" type="search" placeholder="Search a source" aria-label="Search sources"><button id="dgap">Only the gaps</button></div>
+  </div>
+  <div class="droom" id="droom"></div>
+  <div class="dkey"><span><i class="k1"></i>official, first-hand</span><span><i class="k2"></i>official, via a secondary report</span><span><i class="k3"></i>not published</span></div>
+</section>
+
+<footer id="foot">
+  <div class="fl"><b>Indian students going abroad</b><span>A system map · NID Andhra Pradesh, System Visualization, 2026</span></div>
+  <div class="fr"><span>Data: official government and statistical sources, listed above</span><a href="#hero" id="totop">Back to top ↑</a></div>
+</footer>
+<div class="tip" id="tip"></div>
+<div class="here" id="here"><svg viewBox="0 0 56 34" width="56" height="34"><ellipse cx="28" cy="17" rx="24" ry="13" fill="none" stroke="#2445FF" stroke-width="1.5"/><circle cx="4" cy="17" r="3.2"/><circle cx="28" cy="4" r="3.2"/><circle cx="52" cy="17" r="3.2"/><circle cx="28" cy="30" r="3.2"/></svg><span id="herel">Home</span></div>
+
+<script src="js/vendor/gsap.min.js"></script>
+<script src="js/vendor/ScrollTrigger.min.js"></script>
+<script src="js/vendor/lenis.min.js"></script>
+<script src="js/vendor/d3.min.js"></script>
+<script src="js/vendor/topojson-client.min.js"></script>
+<script src="js/world-110m.js"></script>
+<script src="js/india-dots.js"></script>
+<script src="js/india-map.js"></script>
+<script src="js/data.js"></script>
+<script src="js/vendor/three.min.js"></script>
+<script src="js/globe3d.js"></script>
+<script src="js/prologue.js"></script>
+<script src="js/act1.js"></script>
+<script src="js/act1b.js"></script>
+<script src="js/act2.js"></script>
+<script src="js/act2b.js"></script>
+<script src="js/act3.js"></script>
+<script src="js/act4.js"></script>
+<script src="js/act4b.js"></script>
+<script src="js/act4c.js"></script>
+<script src="js/act4d.js"></script>
+<script src="js/nav.js"></script>
+</body>
+</html>

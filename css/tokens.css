@@ -1,0 +1,38 @@
+/* Minds Adrift · Design System v1 · Palette E: Cool Grey & Cobalt
+   RULE: 3 colours only. Hierarchy comes from tints/opacity, never new hues. */
+:root{
+  /* --- the 3 colours --- */
+  --grey:#EEF0F3;      /* background (light sections) / text on dark */
+  --ink:#0F1115;       /* text, data, dark sections */
+  --cobalt:#2445FF;    /* the ONLY accent: India · the student · leaving */
+
+  /* --- ink tints (on grey) --- */
+  --ink-90:rgba(15,17,21,.90); --ink-70:rgba(15,17,21,.70); --ink-50:rgba(15,17,21,.50);
+  --ink-30:rgba(15,17,21,.30); --ink-15:rgba(15,17,21,.15); --ink-08:rgba(15,17,21,.08);
+  /* --- grey tints (on ink / dark sections) --- */
+  --grey-90:rgba(238,240,243,.90); --grey-70:rgba(238,240,243,.70); --grey-50:rgba(238,240,243,.50);
+  --grey-30:rgba(238,240,243,.30); --grey-15:rgba(238,240,243,.15); --grey-08:rgba(238,240,243,.08);
+  /* --- cobalt tints --- */
+  --cobalt-70:#6178FF; --cobalt-45:#94A3FF; --cobalt-25:#C2CBFF; --cobalt-10:#E4E8FF;
+
+  /* --- meaning (never change per chart) --- */
+  --c-india:var(--cobalt);      /* India, Ananya, departures */
+  --c-abroad:var(--ink);        /* destinations (solid = focus, tints = context) */
+  --c-money:var(--cobalt);      /* money: always DASHED or hatched cobalt */
+  --c-context:var(--ink-15);    /* everything not in focus */
+
+  /* --- type --- */
+  --f-display:Fraunces,Georgia,serif;  /* headlines + big numbers */
+  --f-body:Inter,system-ui,sans-serif; /* body */
+  --f-label:Plex,ui-monospace,monospace; /* labels, sources, UI */
+  --t-hero:clamp(72px,10vw,168px);
+  --t-h1:clamp(44px,5.4vw,84px);
+  --t-h2:clamp(30px,3.2vw,48px);
+  --t-num:clamp(64px,9vw,150px);
+  --t-body:clamp(17px,1.25vw,19px);
+  --t-cap:14px; --t-label:11px;
+
+  /* --- space + motion --- */
+  --pad-x:6vw; --gap:24px; --radius:10px;
+  --ease:cubic-bezier(.22,1,.36,1); --dur:.7s;
+}
